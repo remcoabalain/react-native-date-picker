@@ -316,7 +316,7 @@ React Native Date Picker is a cross platform component for iOS and Android. It u
 ## Sponsors
 <img src="docs/mindler.png" width="200">
 
-Mindler is a "Psychologist online" hiring React Native Developers! <a href="https://career.mindlercare.com/jobs/1599255-react-native-developer?referer=react-native-date-picker">Read more and apply</a>.
+Mindler is a "Psychologist online" hiring React Native Developers! <a target="_blank" href="https://career.mindlercare.com/jobs/1599255-react-native-developer?referer=react-native-date-picker">Read more and apply</a>.
 
 ## Support this package!
 
