@@ -313,8 +313,15 @@ Set mode property to `time` to show the time picker:
 
 React Native Date Picker is a cross platform component for iOS and Android. It uses native code from respective platform to get the genuine look and feel the users expect. A strong motivation for creating this picker was the datetime mode on Android. It's quite unique for the platform and avoids two different picker popups, which normally is necessary. Instead, this datetime mode requires fewer user actions and enables a great user-experience.
 
+## Sponsors
+<hr />
+<img src="docs/mindler.png" width="200">
+
+Mindler is a "Psychologist online" hiring React Native Developers! <a href="https://career.mindlercare.com/jobs/1599255-react-native-developer?referer=react-native-date-picker">Read more and apply</a>.
+<hr/>
+
 ## Support this package!
 
-If you like this package and want to support it, you can give it <a href="https://openbase.com/js/react-native-date-picker" target="_blank">a review</a> or a github star ⭐
+If you like this package and want to support it, you can give it a github star ⭐
 
 Also, PR's are welcome!
