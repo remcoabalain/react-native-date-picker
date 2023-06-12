@@ -5,7 +5,7 @@ import {
   NativeModules,
 } from 'react-native'
 
-const RCTDatePickerIOS = requireNativeComponent('RNDatePicker')
+const RCTDatePickerIOS = requireNativeComponent('RNHenningHallDatePicker')
 
 export default class DatePickerIOS extends React.Component {
   _picker = null

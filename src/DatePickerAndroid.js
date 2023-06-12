@@ -23,13 +23,13 @@ class DatePickerAndroid extends React.PureComponent {
     this.previousProps = props;
     if (props.modal) {
       if (props.open && isClosed) {
-        NativeModules.RNDatePicker.openPicker(
+        NativeModules.RNHenningHallDatePicker.openPicker(
           props,
           this._onConfirm,
           this.props.onCancel
         )
       } else if (!props.open && !isClosed) {
-        NativeModules.RNDatePicker.closePicker()
+        NativeModules.RNHenningHallDatePicker.closePicker()
       }
       return null
     }

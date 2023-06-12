@@ -115,6 +115,6 @@ public class DatePickerModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "RNDatePicker";
+        return "RNHenningHallDatePicker";
     }
 }

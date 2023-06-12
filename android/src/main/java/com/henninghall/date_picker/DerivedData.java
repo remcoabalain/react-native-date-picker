@@ -92,7 +92,7 @@ public class DerivedData {
 
         if(!unorderedTypes.isEmpty()) {
             Log.e(
-                    "RNDatePicker",
+                    "RNHenningHallDatePicker",
                     unorderedTypes.size() + " wheel types cannot be ordered. Wheel type 0: " + unorderedTypes.get(0));
         }
 

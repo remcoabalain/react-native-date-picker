@@ -47,7 +47,7 @@
 		DA5891CF1BA9A9FC002B4DB2 = {
 			isa = PBXGroup;
 			children = (
-				DA5891DA1BA9A9FC002B4DB2 /* RNDatePicker */,
+				DA5891DA1BA9A9FC002B4DB2 /* RNHenningHallDatePicker */,
 				DA5891D91BA9A9FC002B4DB2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,7 +60,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DA5891DA1BA9A9FC002B4DB2 /* RNDatePicker */ = {
+		DA5891DA1BA9A9FC002B4DB2 /* RNHenningHallDatePicker */ = {
 			isa = PBXGroup;
 			children = (
 				5B5A664C2130B82E00599381 /* RNDatePickerManager.h */,
@@ -68,15 +68,15 @@
 				DA5891DB1BA9A9FC002B4DB2 /* DatePicker.h */,
 				DA5891DD1BA9A9FC002B4DB2 /* DatePicker.m */,
 			);
-			path = RNDatePicker;
+			path = RNHenningHallDatePicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DA5891D71BA9A9FC002B4DB2 /* RNDatePicker */ = {
+		DA5891D71BA9A9FC002B4DB2 /* RNHenningHallDatePicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA5891E11BA9A9FC002B4DB2 /* Build configuration list for PBXNativeTarget "RNDatePicker" */;
+			buildConfigurationList = DA5891E11BA9A9FC002B4DB2 /* Build configuration list for PBXNativeTarget "RNHenningHallDatePicker" */;
 			buildPhases = (
 				DA5891D41BA9A9FC002B4DB2 /* Sources */,
 				DA5891D51BA9A9FC002B4DB2 /* Frameworks */,
@@ -86,7 +86,7 @@
 			);
 			dependencies = (
 			);
-			name = RNDatePicker;
+			name = RNHenningHallDatePicker;
 			productName = RNDeviceInfo;
 			productReference = DA5891D81BA9A9FC002B4DB2 /* libRNDatePicker.a */;
 			productType = "com.apple.product-type.library.static";
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DA5891D31BA9A9FC002B4DB2 /* Build configuration list for PBXProject "RNDatePicker" */;
+			buildConfigurationList = DA5891D31BA9A9FC002B4DB2 /* Build configuration list for PBXProject "RNHenningHallDatePicker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DA5891D71BA9A9FC002B4DB2 /* RNDatePicker */,
+				DA5891D71BA9A9FC002B4DB2 /* RNHenningHallDatePicker */,
 			);
 		};
 /* End PBXProject section */
@@ -252,7 +252,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DA5891D31BA9A9FC002B4DB2 /* Build configuration list for PBXProject "RNDatePicker" */ = {
+		DA5891D31BA9A9FC002B4DB2 /* Build configuration list for PBXProject "RNHenningHallDatePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA5891DF1BA9A9FC002B4DB2 /* Debug */,
@@ -261,7 +261,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA5891E11BA9A9FC002B4DB2 /* Build configuration list for PBXNativeTarget "RNDatePicker" */ = {
+		DA5891E11BA9A9FC002B4DB2 /* Build configuration list for PBXNativeTarget "RNHenningHallDatePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA5891E21BA9A9FC002B4DB2 /* Debug */,
