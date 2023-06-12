@@ -5,11 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import <UIKit/UIKit.h>
+#import <React/RCTConvert.h>
+#import <React/RCTViewManager.h>
 
-@interface DatePicker : UIDatePicker
+@interface RNHenningHallDatePickerManager : RCTViewManager
 
-- (void)setTextColorProp:(NSString *)hexColor;
+@property (strong, nonatomic) UIViewController *topViewController;
 
 @end
-

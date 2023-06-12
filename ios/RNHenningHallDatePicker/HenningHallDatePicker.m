@@ -5,19 +5,19 @@
  * LICENSE file in the root directory of this source tree.
  */
 #import "RCTComponent.h"
-#import "DatePicker.h"
+#import "HenningHallDatePicker.h"
 
 #import "RCTUtils.h"
 #import "UIView+React.h"
 
-@interface DatePicker ()
+@interface HenningHallDatePicker ()
 
 @property (nonatomic, copy) RCTBubblingEventBlock onChange;
 @property (nonatomic, assign) NSInteger reactMinuteInterval;
 
 @end
 
-@implementation DatePicker
+@implementation HenningHallDatePicker
 
 
 #define UIColorFromRGB(rgbHex) [UIColor colorWithRed:((float)((rgbHex & 0xFF0000) >> 16))/255.0 green:((float)((rgbHex & 0xFF00) >> 8))/255.0 blue:((float)(rgbHex & 0xFF))/255.0 alpha:1.0]
@@ -34,15 +34,15 @@
     if([cleanString length] == 6) {
         cleanString = [cleanString stringByAppendingString:@"ff"];
     }
-    
+
     unsigned int baseValue;
     [[NSScanner scannerWithString:cleanString] scanHexInt:&baseValue];
-    
+
     float red = ((baseValue >> 24) & 0xFF)/255.0f;
     float green = ((baseValue >> 16) & 0xFF)/255.0f;
     float blue = ((baseValue >> 8) & 0xFF)/255.0f;
     float alpha = ((baseValue >> 0) & 0xFF)/255.0f;
-    
+
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
@@ -58,7 +58,7 @@
             self.preferredDatePickerStyle = UIDatePickerStyleWheels;
         }
          _reactMinuteInterval = 1;
-         
+
         // only allow gregorian calendar
         self.calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
     }
@@ -86,7 +86,7 @@
 
 - (void)setTextColorProp:(NSString *)hexColor
 {
-    
+
     if(@available(iOS 13, *)) {
 
         // black text -> set light mode

@@ -5,12 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import "RNDatePickerManager.h"
+#import "RNHenningHallDatePickerManager.h"
 #import <React/RCTLog.h>
 
 #import "RCTConvert.h"
 
-#import "DatePicker.h"
+#import "HenningHallDatePicker.h"
 
 @implementation RCTConvert(UIDatePicker)
 
@@ -23,7 +23,7 @@ RCT_ENUM_CONVERTER(UIDatePickerMode, (@{
 
 @end
 
-@implementation RNDatePickerManager
+@implementation RNHenningHallDatePickerManager
 
 RCT_EXPORT_MODULE()
 
@@ -37,7 +37,7 @@ RCT_EXPORT_METHOD(removeListeners : (NSInteger)count) {
 
 - (UIView *)view
 {
-  return [DatePicker new];
+  return [HenningHallDatePicker new];
 }
 
 RCT_EXPORT_VIEW_PROPERTY(date, NSDate)
@@ -50,7 +50,7 @@ RCT_REMAP_VIEW_PROPERTY(mode, datePickerMode, UIDatePickerMode)
 RCT_REMAP_VIEW_PROPERTY(timeZoneOffsetInMinutes, timeZone, NSTimeZone)
 
 
-RCT_CUSTOM_VIEW_PROPERTY(textColor, NSString, DatePicker)
+RCT_CUSTOM_VIEW_PROPERTY(textColor, NSString, HenningHallDatePicker)
 {
     [view setTextColorProp:[RCTConvert NSString:json]];
 }
@@ -60,7 +60,7 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *) props
                   onCancel:(RCTResponseSenderBlock) onCancel)
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        
+
         bool iPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
         UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
         CGRect rootBounds = rootViewController.view.bounds;
@@ -68,7 +68,7 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *) props
         title = [title isEqualToString:@""] ? nil : title;
         NSString * confirmText = [RCTConvert NSString:[props objectForKey:@"confirmText"]];
         NSString * cancelText = [RCTConvert NSString:[props objectForKey:@"cancelText"]];
-        DatePicker* picker = [[DatePicker alloc] init];
+        HenningHallDatePicker* picker = [[HenningHallDatePicker alloc] init];
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleActionSheet];
         UIView * alertView = alertController.view;
 
@@ -80,7 +80,7 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *) props
         NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:alertView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:alertHeightPx];
         [alertView addConstraint:height];
         pickerBounds.size.height = pickerHeight;
-        
+
         // width
         double pickerWidth = [self getPickerWidth:alertView];
         int alertWidthPx = pickerWidth;
@@ -90,24 +90,24 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *) props
 
         // top padding
         pickerBounds.origin.y += iPad ? (title ? 20: 5) : (title ? 30 : 10);
-        
+
         [picker setFrame: pickerBounds];
-       
+
         NSDate * _Nonnull date = [RCTConvert NSDate:[props objectForKey:@"date"]];
         [picker setDate:date];
 
         NSDate * minimumDate = [RCTConvert NSDate:[props objectForKey:@"minimumDate"]];
         if(minimumDate) [picker setMinimumDate:minimumDate];
-        
+
         NSDate * maximumDate = [RCTConvert NSDate:[props objectForKey:@"maximumDate"]];
         if(maximumDate) [picker setMaximumDate:maximumDate];
-        
+
         NSString * textColor = [RCTConvert NSString:[props objectForKey:@"textColor"]];
         if(textColor) [picker setTextColorProp:textColor];
-        
+
         UIDatePickerMode mode = [RCTConvert UIDatePickerMode:[props objectForKey:@"mode"]];
         [picker setDatePickerMode:mode];
-        
+
         NSLocale * locale = [RCTConvert NSLocale:[props objectForKey:@"locale"]];
         if(locale) [picker setLocale:locale];
 
@@ -129,16 +129,16 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *) props
                 alertController.overrideUserInterfaceStyle = UIUserInterfaceStyleUnspecified;
             }
         }
-        
+
         [alertView addSubview:picker];
-        
+
         UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:confirmText style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             onConfirm(@[@{ @"timestamp": @(picker.date.timeIntervalSince1970 * 1000.0) }]);
         }];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelText style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
             onCancel(@[]);
         }];
-            
+
         [alertController addAction:cancelAction];
         [alertController addAction:confirmAction];
 
@@ -154,7 +154,7 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *) props
             popPresenter.presentingViewController.preferredContentSize = CGSizeMake(pickerWidth, alertHeightPx);
             [popPresenter setPermittedArrowDirections: (UIPopoverArrowDirection) 0];
         }
-        
+
         // Finding the top view controller which is neccessary to be able to show the picker from within modal
         _topViewController = rootViewController;
         while (_topViewController.presentedViewController){
