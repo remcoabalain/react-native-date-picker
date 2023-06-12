@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B5A664D2130B82E00599381 /* RNDatePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A664B2130B82D00599381 /* RNDatePickerManager.m */; };
-		DA5891DC1BA9A9FC002B4DB2 /* DatePicker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DA5891DB1BA9A9FC002B4DB2 /* DatePicker.h */; };
-		DA5891DE1BA9A9FC002B4DB2 /* DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5891DD1BA9A9FC002B4DB2 /* DatePicker.m */; };
+		5B5A664D2130B82E00599381 /* RNHenningHallDatePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A664B2130B82D00599381 /* RNHenningHallDatePickerManager.m */; };
+		DA5891DC1BA9A9FC002B4DB2 /* HenningHallDatePicker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DA5891DB1BA9A9FC002B4DB2 /* HenningHallDatePicker.h */; };
+		DA5891DE1BA9A9FC002B4DB2 /* HenningHallDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5891DD1BA9A9FC002B4DB2 /* HenningHallDatePicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,18 +19,18 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				DA5891DC1BA9A9FC002B4DB2 /* DatePicker.h in CopyFiles */,
+				DA5891DC1BA9A9FC002B4DB2 /* HenningHallDatePicker.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5B5A664B2130B82D00599381 /* RNDatePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDatePickerManager.m; sourceTree = "<group>"; };
-		5B5A664C2130B82E00599381 /* RNDatePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDatePickerManager.h; sourceTree = "<group>"; };
-		DA5891D81BA9A9FC002B4DB2 /* libRNDatePicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNDatePicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA5891DB1BA9A9FC002B4DB2 /* DatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePicker.h; sourceTree = "<group>"; };
-		DA5891DD1BA9A9FC002B4DB2 /* DatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePicker.m; sourceTree = "<group>"; };
+		5B5A664B2130B82D00599381 /* RNHenningHallDatePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNHenningHallDatePickerManager.m; sourceTree = "<group>"; };
+		5B5A664C2130B82E00599381 /* RNHenningHallDatePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNHenningHallDatePickerManager.h; sourceTree = "<group>"; };
+		DA5891D81BA9A9FC002B4DB2 /* libRNHenningHallDatePicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNHenningHallDatePicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA5891DB1BA9A9FC002B4DB2 /* HenningHallDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HenningHallDatePicker.h; sourceTree = "<group>"; };
+		DA5891DD1BA9A9FC002B4DB2 /* HenningHallDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HenningHallDatePicker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 		DA5891D91BA9A9FC002B4DB2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DA5891D81BA9A9FC002B4DB2 /* libRNDatePicker.a */,
+				DA5891D81BA9A9FC002B4DB2 /* libRNHenningHallDatePicker.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,10 +63,10 @@
 		DA5891DA1BA9A9FC002B4DB2 /* RNHenningHallDatePicker */ = {
 			isa = PBXGroup;
 			children = (
-				5B5A664C2130B82E00599381 /* RNDatePickerManager.h */,
-				5B5A664B2130B82D00599381 /* RNDatePickerManager.m */,
-				DA5891DB1BA9A9FC002B4DB2 /* DatePicker.h */,
-				DA5891DD1BA9A9FC002B4DB2 /* DatePicker.m */,
+				5B5A664C2130B82E00599381 /* RNHenningHallDatePickerManager.h */,
+				5B5A664B2130B82D00599381 /* RNHenningHallDatePickerManager.m */,
+				DA5891DB1BA9A9FC002B4DB2 /* HenningHallDatePicker.h */,
+				DA5891DD1BA9A9FC002B4DB2 /* HenningHallDatePicker.m */,
 			);
 			path = RNHenningHallDatePicker;
 			sourceTree = "<group>";
@@ -88,7 +88,7 @@
 			);
 			name = RNHenningHallDatePicker;
 			productName = RNDeviceInfo;
-			productReference = DA5891D81BA9A9FC002B4DB2 /* libRNDatePicker.a */;
+			productReference = DA5891D81BA9A9FC002B4DB2 /* libRNHenningHallDatePicker.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -127,8 +127,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA5891DE1BA9A9FC002B4DB2 /* DatePicker.m in Sources */,
-				5B5A664D2130B82E00599381 /* RNDatePickerManager.m in Sources */,
+				DA5891DE1BA9A9FC002B4DB2 /* HenningHallDatePicker.m in Sources */,
+				5B5A664D2130B82E00599381 /* RNHenningHallDatePickerManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
