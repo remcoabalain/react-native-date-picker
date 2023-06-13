@@ -1,3 +1,6 @@
+# Note!
+We have renamed the native module to `RNHenningHallDatePicker` instead of `RNDatePicker`, because we both use `react-native-date-picker` and `react-native-community/date-picker`, which both use the same name. Therefor we created a new branch and forked this repository.
+
 # React Native Date Picker [![npm](https://img.shields.io/npm/v/react-native-date-picker.svg)](https://www.npmjs.com/package/react-native-date-picker) [![Build status](https://img.shields.io/github/actions/workflow/status/henninghall/react-native-date-picker/android-detox.yml?branch=master&label=tests)](https://github.com/henninghall/react-native-date-picker/actions) [![npm](https://img.shields.io/npm/dm/react-native-date-picker.svg)](https://www.npmjs.com/package/react-native-date-picker)
 
 This is a React Native Date Picker with following main features:
